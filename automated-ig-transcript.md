@@ -50,6 +50,6 @@ This is the source material behind the `ai-content-farm/` folder scaffolded the 
 Tool decisions made so far (see `SETUP.md` for full status):
 - Researcher: Apify (account/scraper TBD, **not running live scrapes yet**)
 - Copywriter: handled directly by Claude, no extra API
-- Designer: ChiAI (kie.ai-style aggregator) for Nano Banana 2 / Kling 2.6 image generation
+- Designer: KIE AI (kie.ai) for Nano Banana 2 / Kling image generation
 - Storage: Airtable (token already set, base/schema TBD)
 - Poster: Buffer (official IG Business API, reuses the Buffer MCP connector noted in the Jarvis transcript)

@@ -8,7 +8,7 @@ Based on the process described in [automated-ig-transcript.md](automated-ig-tran
 
 1. **Researcher** — Apify scrapes viral posts from top accounts in a niche
 2. **Copywriter** — rewrite + voice-match (handled directly via Claude)
-3. **Designer** — ChiAI (Nano Banana 2 / Kling 2.6) turns copy into images
+3. **Designer** — KIE AI (Nano Banana 2 / Kling) turns copy into images
 4. **Poster** — Buffer auto-posts on a schedule
 
 Data store: Airtable (`Posts` table).

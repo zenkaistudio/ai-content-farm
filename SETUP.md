@@ -11,9 +11,10 @@ Pipeline: **Researcher (scrape) → Copywriter (rewrite) → Designer (image-gen
 ## 02 Copywriter — rewrite + voice-match
 - [x] No extra service needed — handled directly by Claude from the scraped rows
 
-## 03 Designer — copy → image (ChiAI)
-- [ ] ChiAI account/API key (Nano Banana 2 / Kling 2.6 access)
-- [ ] `CHIAI_API_KEY` in `.env`
+## 03 Designer — copy → image (KIE AI / kie.ai)
+- [ ] KIE AI account/API key (Nano Banana 2 / Kling access)
+- [ ] `KIEAI_API_KEY` in `.env`
+- API details (from docs.kie.ai): base endpoint `https://api.kie.ai`, auth via `Authorization: Bearer YOUR_API_KEY`. Async job-based flow — `POST /api/v1/jobs/createTask` with `{"model": "google/nano-banana", "input": {"prompt": "..."}}` returns a `taskId`, then poll the Get Task Details endpoint for the result.
 
 ## 04 Poster — auto-post on schedule (Buffer)
 - [x] Buffer account, Instagram Business account connected — connected to the **"collective.events"** page (a low-follower test page) intentionally, to test the pipeline before pointing it at a real account like `@studio.zenkai`
@@ -36,7 +37,7 @@ Pipeline: **Researcher (scrape) → Copywriter (rewrite) → Designer (image-gen
 | Likes | Number | at scrape time |
 | Scraped At | Date | |
 | Rewritten Copy | Long text | Copywriter output |
-| Image Prompt | Long text | sent to ChiAI |
+| Image Prompt | Long text | sent to KIE AI |
 | Image URL/Attachment | Attachment | Designer output |
 | Status | Single select | New / Rewritten / Designed / Scheduled / Posted |
 | Scheduled For | Date | |
@@ -44,4 +45,4 @@ Pipeline: **Researcher (scrape) → Copywriter (rewrite) → Designer (image-gen
 
 ## Open decisions
 - Exact Apify actor to use (not chosen yet)
-- Whether ChiAI is accessed via direct API or an aggregator dashboard — need API docs once you share access details
+- Which KIE AI model to default to per image (`google/nano-banana` vs `nano-banana-2` vs Kling for video) — TBD once we're generating real images
