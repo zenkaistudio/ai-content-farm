@@ -1,0 +1,11 @@
+# Credentials and secrets — never commit these
+.env
+
+# Node
+node_modules/
+
+# Logs
+*.log
+
+# OS
+.DS_Store
