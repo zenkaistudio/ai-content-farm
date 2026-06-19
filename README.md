@@ -13,6 +13,6 @@ Based on the process described in [automated-ig-transcript.md](automated-ig-tran
 
 Data store: Airtable (`Posts` table).
 
-See [SETUP.md](SETUP.md) for current setup status and the Airtable schema.
+See [SETUP.md](SETUP.md) for current setup status and the Airtable schema, and [content-strategy-reference.md](content-strategy-reference.md) for everything learned from scraping/analyzing viral content (engagement methodology, hooks, carousel formats).
 
 Currently posting to `collective.events` on Instagram as a test page before pointing this at a real account.
