@@ -55,6 +55,15 @@ Combining app_source_hub's clean producibility + Polymarket's punchy headline-ca
 
 First applied example: the carousel concept built for our #1 post ("Did Google just quietly change how we use YouTube forever?") — see chat history 2026-06-19, can be rebuilt here once we're generating real images.
 
-## 5. Open data-quality notes
+## 5. Image-gen prompt lessons (from first real test, 2026-06-19)
+
+Full detail in [nano-banana-2-api.md](nano-banana-2-api.md#prompt-writing-lessons-learned-from-first-real-carousel-test-2026-06-19). Summary — these cost real credits to learn, don't repeat them:
+- Never state the same headline in two places on a slide — causes garbled hallucinated text on the larger instance.
+- Always explicitly ban Instagram UI chrome in the prompt (like/comment/share/save icons) — the model adds it unprompted otherwise.
+- Don't hardcode account handle/logo into prompts until branding is actually finalized — leave it off, add it back once decided.
+- Keep prompts lean and tied only to confirmed format elements from real scraped examples — don't invent extra brand-identity flourishes. Simpler prompt = fewer failure points = less wasted spend.
+- Solid-color pull-quote slides render reliably; the model fills in sensible supporting icons for bullet lists on its own without needing every visual over-specified.
+
+## 6. Open data-quality notes
 - Apify's `instagram-post-scraper` occasionally misattributes a result's `ownerUsername` to a different account than the one queried (seen twice: "practicalyai" and "cooldeep.ai" showed up unprompted) — likely a collab-post quirk. Filter results to only the usernames you actually queried before trusting `ownerUsername`.
 - Actor input field is the singular `username` (as an array), not `usernames` — easy mistake, the actor's own docs/examples are misleading here.
